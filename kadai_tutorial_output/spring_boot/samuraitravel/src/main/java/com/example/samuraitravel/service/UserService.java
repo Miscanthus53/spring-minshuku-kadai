@@ -41,7 +41,7 @@ public class UserService {
         return userRepository.save(user);  
     }    
     
-
+    @Transactional
     public void update(UserEditForm userEditForm) {
         User user = userRepository.getReferenceById(userEditForm.getId());
         
